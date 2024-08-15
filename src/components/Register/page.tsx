@@ -6,7 +6,7 @@ import {
 import { auth } from "../../firebase";
 import "../../components/Register/page.css"
 import { FaUser, FaLock, FaEnvelope } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const RegisterPage: React.FC = () => {
   const [firstName, setFirstName] = useState("");
@@ -15,6 +15,7 @@ const RegisterPage: React.FC = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
+   const navigate = useNavigate();
 
   const handleRegister = async (event: FormEvent) => {
     event.preventDefault();
@@ -44,9 +45,7 @@ const RegisterPage: React.FC = () => {
         })
       );
 
-      setMessage(
-        "Registration successful! Please check your email for verification."
-      );
+      navigate("/message")
 
       setFirstName("");
       setEmail("");
@@ -129,11 +128,16 @@ const RegisterPage: React.FC = () => {
           </div>
           {error && <p className="error">{error}</p>}
           {message && <p className="success">{message}</p>}
+          {/* <Link to="/message" className="link-reg">
+            <button type="submit" className="button-sign">
+              Sign Up
+            </button>
+          </Link> */}
           <button type="submit" className="button-sign">
             Sign Up
           </button>
           <p className="dont-reg">
-          Already have an account?
+            Already have an account?
             <Link to="/login" className="link-reg">
               Login
             </Link>

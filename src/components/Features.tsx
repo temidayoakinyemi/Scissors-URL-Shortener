@@ -10,9 +10,9 @@ const Features: React.FC = () => {
       icon: "🔗",
     },
     {
-      title: "Link Analytics",
+      title: "Qr Code",
       description:
-        "Track click data and user engagement for your shortened links.",
+        "Generate QR codes for your business and events.Attract your audience and customers to your doorstep with this convenient scan-and-go solution.",
       icon: "📊",
     },
     {

@@ -9,6 +9,7 @@ import { Route, Routes } from "react-router-dom";
 import Dashboardpage from "./components/Dashboard/page";
 import ForgotPassword from "./components/ForgotPassword/page";
 import PageLayout from "./components/page-layout";
+import Messagepage from "./components/Message/message";
 
 const App: React.FC = () => {
   return (
@@ -28,6 +29,7 @@ const App: React.FC = () => {
           />
           <Route path="/login" element={<Loginpage />} />
           <Route path="/register" element={<RegisterPage />} />
+          <Route path="/message" element={<Messagepage />} />
           <Route path="/forgotpassword" element={<ForgotPassword />} />
         </Route>
         <Route path="/dashboard" element={<Dashboardpage />} />
