@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect,  } from "react";
 import { QRCodeCanvas } from "qrcode.react";
 import { shortenUrl } from "../../Api/Shorten";
 import {
@@ -25,8 +25,6 @@ const Dashboardpage2: React.FC = () => {
   const [urls, setUrls] = useState<UrlData[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [svgData, setSvgData] = useState("");
-
-  const qrCodeSvgRef = useRef<SVGSVGElement | null>(null);
 
   useEffect(() => {
     const fetchUrls = async () => {
