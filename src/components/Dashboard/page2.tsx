@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { QRCodeCanvas } from "qrcode.react";
 import { shortenUrl } from "../../Api/Shorten";
 import {
   collection,
@@ -23,6 +24,9 @@ const Dashboardpage2: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [urls, setUrls] = useState<UrlData[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+  const [svgData, setSvgData] = useState("");
+
+  const qrCodeSvgRef = useRef<SVGSVGElement | null>(null);
 
   useEffect(() => {
     const fetchUrls = async () => {
@@ -86,6 +90,30 @@ const Dashboardpage2: React.FC = () => {
     );
   };
 
+  const downloadQRCode = () => {
+    const canvas = document.getElementById("qr-code") as HTMLCanvasElement;
+    const pngUrl = canvas
+      .toDataURL("image/png")
+      .replace("image/png", "image/octet-stream");
+    let downloadLink = document.createElement("a");
+    downloadLink.href = pngUrl;
+    downloadLink.download = "qrcode.png";
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+  };
+
+  useEffect(() => {
+    const qrCodeElement = document.getElementById("qrcode-svg");
+    if (qrCodeElement) {
+      setSvgData(qrCodeElement.innerHTML);
+    }
+  }, []);
+
+  useEffect(() => {
+    console.log(svgData);
+  }, [svgData]);
+
   if (loading) {
     return <p>Loading...</p>;
   }
@@ -120,6 +148,19 @@ const Dashboardpage2: React.FC = () => {
                     {shortUrlId}
                   </a>
                 </p>
+                <QRCodeCanvas
+                  id="qr-code"
+                  value={shortUrlId}
+                  className="qr qr-code"
+                  size={128}
+                />
+                <button
+                  type="button"
+                  onClick={downloadQRCode}
+                  className="download-button"
+                >
+                  Download QR Code
+                </button>
               </div>
             )}
             {error && <p className="error-message">{error}</p>}
