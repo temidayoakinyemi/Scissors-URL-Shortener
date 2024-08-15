@@ -87,7 +87,7 @@ const RegisterPage: React.FC = () => {
             </label>
             <input
               type="email"
-              placeholder="Email Id"
+              placeholder="Enter your Email Id"
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}

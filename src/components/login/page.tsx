@@ -67,7 +67,7 @@ const Loginpage: React.FC = () => {
             </label>
             <input
               type="email"
-              placeholder="Email Id"
+              placeholder="Enter your Email Id"
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -96,18 +96,18 @@ const Loginpage: React.FC = () => {
             Login
           </button>
         </form>
-          <p className="dont">
-            Don&apos;t have an account?{" "}
-            <Link to="/register" className="link">
-              Sign up
-            </Link>
-          </p>
-          <p className="dont">
-            Forgot Password?
-            <Link to="/forgotpassword" className="link">
-              Click here
-            </Link>
-          </p>
+        <p className="dont">
+          Don&apos;t have an account?{" "}
+          <Link to="/register" className="link">
+            Sign up
+          </Link>
+        </p>
+        <p className="dont">
+          Forgot Password?
+          <Link to="/forgotpassword" className="link">
+            Click here
+          </Link>
+        </p>
       </div>
     </div>
   );
