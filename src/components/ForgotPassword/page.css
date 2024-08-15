@@ -1,0 +1,140 @@
+.container-forgot {
+  position: relative;
+  flex-direction: column;
+  margin: auto;
+  width: 420px;
+  height: 420px;
+  background: #fff;
+  border-radius: 10px;
+  color: #676767;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: height 0.2s ease;
+  margin-top: 10%;
+}
+
+.container-h1-forgot {
+  color: #3c009d;
+  font-size: 38px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.label-forgot {
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #d1d5db;
+}
+
+.form-forgot {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.form-di-forgot {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+
+.input-forgot {
+  width: 350px;
+  height: 16px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: #797979;
+  font-size: 16px;
+  padding: 20px 45px 20px 20px;
+  background: #eaeaea;
+}
+
+.input-forgot ::placeholder {
+  color: #797979;
+}
+
+.icon-forgot {
+  position: absolute;
+  right: 20px;
+  top: 100%;
+  translate: 0 -50%;
+  font-size: 16px;
+}
+
+.button-forgot {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #212EA0;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.button-forgot:hover {
+    background-color: #212EA0;
+    color: #fff;
+    transition: 1s;
+}
+
+.sucess-forgot {
+  color: #10b981;
+  font-size: 0.875rem;
+}
+
+.error-forgot {
+  color: #ef4444;
+  font-size: 0.875rem;
+}
+
+.email-se-forgot {
+  color: #10b981;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.icon-forgot-2 {
+  position: absolute;
+  margin-left: 120px;
+  top: 300px;
+  translate: 0 -50%;
+}
+
+.reset-forgot {
+    color: #10b981;
+  font-size: 0.875rem;
+}
+
+.button-forgot-log {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #212EA0;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.button-forgot-log:hover {
+    background-color: #212EA0;
+    color: #fff;
+    transition: 1s;
+}

@@ -1,0 +1,114 @@
+.all-his {
+  display: block;
+}
+
+.all-1 {
+  margin-left: 220px;
+}
+
+.shorten-links-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.url-shortener {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.url-shortener-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.url-shortener-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.url-shortener-input {
+  padding: 10px;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 10px;
+}
+
+.url-shortener-button-1-2 {
+  padding: 0.75rem;
+  width: 100%;
+  font-size: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.url-shortened {
+  padding: 0.75rem;
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.error-message {
+  color: red;
+}
+
+.url-history-table {
+  width: 80%;
+  margin-left: 290px;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.url-history-table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  width: 200px;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+  font-weight: 500;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+.copyButton {
+  background-color: #28a745;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.deleteButton {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
